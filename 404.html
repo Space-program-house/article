@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="zxx" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Home</title>
+	<!-- custom-theme -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<meta name="keywords" content="">
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //custom-theme -->
+	<link href="../file/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+	<!-- Owl-carousel-CSS -->
+	<link href="../file/owl.carousel.css" rel="stylesheet">
+	<link rel="stylesheet" href="../file/team.css" type="text/css" media="all">
+	<link href="../file/style.css" rel="stylesheet" type="text/css" media="all">
+	<!-- font-awesome-icons -->
+	<link href="../file/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+
+	<!-- banner -->
+	<div class="main_section_agile" id="home">
+		<div class="agileits_w3layouts_banner_nav">
+
+			<nav class="navbar navbar-default">
+				<div class="navbar-header navbar-left">
+					<h1><a class="navbar-brand" href="index.html"><span>OI</span></a></h1>
+
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+					<nav class="link-effect-2" id="link-effect-2">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.html" class="effect-3">Home</a></li>
+							<!--
+							<li class="dropdown">
+								<a href="index.html#" class="dropdown-toggle effect-3" data-toggle="dropdown">Blog<b class="caret"></b></a>
+								<ul class="dropdown-menu agile_short_dropdown">
+									<li><a href="A.html">A</a></li>
+									<li><a href="B.html">B</a></li>
+								</ul>
+							</li>
+							-->
+						</ul>
+					</nav>
+				</div>
+			</nav>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+
+	<div class="banner_top">
+		<div class="slider">
+			<div class="wrapper">
+				<div class="agile_banner_text_info">
+					<h5>「宇宙の编程小屋」</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- services -->
+	<div class="services" id="services">
+		<div class="container">
+			<div class="wthree_head_section">
+        <h1 id="biaoti" class="w3l_header w3_agileits_header two"><span>文章生成中...</span></h1>
+			</div>
+			<div class="agile_wthree_inner_grids">
+				<div class="col-md-4 agileits_banner_bottom_left">
+					<div class="agileinfo_banner_bottom_pos">
+						<div class="w3_agileits_banner_bottom_pos_grid two">
+              <div id="resText"><center><h3>请稍后&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3></center></div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+  </div>
+  <script type="text/javascript" >
+    function ajax() {
+        var xmlHttp = null;
+        if (window.ActiveXObject) {
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        } else if (window.XMLHttpRequest) {
+            xmlHttp = new XMLHttpRequest();
+        }
+        if (xmlHttp != null) {
+            xmlHttp.open("get", window.document.location.href+"main.md", true);
+            xmlHttp.send();
+            xmlHttp.onreadystatechange = doResult;                
+        }
+        function doResult() {
+            if (xmlHttp.readyState == 4) { //4表示执行完成
+                if (xmlHttp.status == 200) { //200表示执行成功
+                    var xxx=xmlHttp.responseText;
+                    xxx=marked(xxx);
+                    document.getElementById("biaoti").innerHTML = "<span>文章</span>";
+                    document.getElementById("resText").innerHTML = xxx;
+                }
+                else
+                {
+                    document.getElementById("biaoti").innerHTML = "<span>404</span>";
+                    document.getElementById("resText").innerHTML = 
+                        "<center><h3>找不到文章，请检查路径是否正确。</h3></center>";
+                }
+            }
+            else
+            {
+                document.getElementById("biaoti").innerHTML = "404";
+                document.getElementById("resText").innerHTML = 
+                    "<center><h3>找不到文章，请检查路径是否正确。</h3></center>";
+            }
+        }
+        setTimeout('ajax()',60000);
+    }
+    ajax();
+  </script>
+	<!-- footer -->
+	<div class="footer">
+		<div class="f-bg-w3l">
+			<div class="container">
+				<div class="col-md-4 w3layouts_footer_grid">
+					<h2><span>提个建议</span></h2>
+					<p>给jyb666提个建议，便于更好的维护</p>
+					<form action="https://formspree.io/xbjzdjzp" method="post">
+						<input type="text" name="建议" placeholder="请输入你的建议..." required="">
+						<button class="btn1">发射</button>
+						<div class="clearfix"></div>
+					</form>
+				</div>
+				<div class="clearfix"></div>
+				<p class="copyright">本站套用模板搭建，由<a href="https://www.luogu.com.cn/user/257601">jyb666</a>进行部分功能开发/维护</p>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<!-- js -->
+	<script type="text/javascript" src="../file/jquery-2.1.4.min.js"></script>
+	<!-- //js -->
+	<!-- stats -->
+	<script src="../file/jquery.waypoints.min.js"></script>
+	<script src="../file/jquery.countup.js"></script>
+	<script>
+		$('.counter').countUp();
+	</script>
+	<!-- //stats -->
+	<!-- Slider script -->
+	<script src="../file/responsiveslides.min.js"></script>
+	<script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+			$("#slider").responsiveSlides({
+				auto: true,
+				nav: true,
+				manualControls: '#slider3-pager',
+			});
+		});
+	</script>
+
+	<!-- /nav -->
+	<!-- requried-jsfiles-for owl -->
+	<script src="../file/owl.carousel.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#owl-demo2").owlCarousel({
+				items: 1,
+				lazyLoad: false,
+				autoPlay: true,
+				navigation: false,
+				navigationText: false,
+				pagination: true,
+			});
+		});
+	</script>
+	<!-- //requried-jsfiles-for owl -->
+
+	<script src="../file/modernizr-2.6.2.min.js"></script>
+	<!-- //nav -->
+	<!-- js for portfolio lightbox -->
+	<script src="../file/jquery.chocolat.js"></script>
+	<link rel="stylesheet " href="../file/chocolat.css" type="text/css" media="all">
+	<!--light-box-files -->
+	<script type="text/javascript ">
+		$(function () {
+			$('.portfolio-grids a').Chocolat();
+		});
+	</script>
+	<!-- /js for portfolio lightbox -->
+
+
+	<script type="text/javascript" src="../file/bootstrap-3.1.1.min.js"></script>
+
+
+
+
+</body>
+</html>
